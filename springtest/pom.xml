@@ -45,13 +45,10 @@
     <artifactId>spring-aop</artifactId>
     <version>3.2.11.RELEASE</version>
     </dependency>
-    
-     <dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-expressions</artifactId>
-    <version>3.2.11.RELEASE</version>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-expression</artifactId>
+    	<version>3.2.11.RELEASE</version>
     </dependency>
-    
-    
   </dependencies>
 </project>

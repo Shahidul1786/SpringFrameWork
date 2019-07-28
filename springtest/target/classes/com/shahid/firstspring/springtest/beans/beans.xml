@@ -4,7 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="patient"
+	<bean id="Patient"
 		class="com.shahid.firstspring.springtest.Patient">
+	
+	
+	
+	
 	</bean>
 </beans>
