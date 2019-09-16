@@ -6,9 +6,5 @@
 
 	<bean id="Patient"
 		class="com.shahid.firstspring.springtest.Patient">
-	
-	
-	
-	
 	</bean>
 </beans>
