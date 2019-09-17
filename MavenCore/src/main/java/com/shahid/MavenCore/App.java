@@ -25,7 +25,11 @@ public class App
     	
     	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
     	
-    	Vehicle obj = (Vehicle) context.getBean("vehicle");
+    	Vehicle obj = (Vehicle) context.getBean("car");
     	obj.Drive();
+    	
+    	//Tyre tyre = (Tyre)context.getBean("car");
+    	
+    	//System.out.println(tyre);
     }
 }
