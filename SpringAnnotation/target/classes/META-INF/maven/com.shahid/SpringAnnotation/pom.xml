@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shahid</groupId>
-	<artifactId>MavenCore</artifactId>
+	<artifactId>SpringAnnotation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>MavenCore</name>
+	<name>SpringAnnotation</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -29,7 +29,5 @@
 			<version>5.1.9.RELEASE</version>
 
 		</dependency>
-
-
 	</dependencies>
 </project>
