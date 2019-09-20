@@ -7,14 +7,14 @@
   
   <servlet>
   
-   <servlet-name>shahid</servlet-name>
+   <servlet-name>dispatcher-servlet</servlet-name>
    <servlet-class>org.springframework.web.servlet.DispactherServlet</servlet-class>
   
   </servlet>
   
   <servlet-mapping>
   
-    <servlet-name>shahid</servlet-name>
+    <servlet-name>dispatcher-servlet</servlet-name>
     <url-pattern>/</url-pattern>
   
   </servlet-mapping>
