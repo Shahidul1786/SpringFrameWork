@@ -7,6 +7,7 @@ package com.shahid;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -18,8 +19,9 @@ public class Test {
     public static void main(String[] args) {
         
         // programatic xml ApplicationContext;
-        ApplicationContext context = new ClassPathXmlApplicationContext("com/shahid/ApplicationContext.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/shahid/ApplicationContext.xml");
         
+        context.registerShutdownHook();
         Hello h = (Hello) context.getBean("hello");
         h.setMessage("Hello Spring");
         System.out.println(h.getMessage());
@@ -27,11 +29,14 @@ public class Test {
         
         // Configration ApplicationContext;
         
-        ApplicationContext context1 = new AnnotationConfigApplicationContext(HelloConfig.class);
+        // after prototype Scope;
+       // ApplicationContext context1 = new AnnotationConfigApplicationContext(HelloConfig.class);
         
-        Hello h2 = (Hello) context1.getBean("hello");
-        h2.setMessage("Hello Spring2");
-        System.out.println(h2.getMessage());
+       // after bean initialize and Destroy;
+       
+       // Hello h2 = (Hello) context.getBean("hello");
+       // h2.setMessage("Hello Spring2");
+        //System.out.println(h2.getMessage());
         
     }
     

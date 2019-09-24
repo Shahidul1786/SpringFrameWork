@@ -21,6 +21,13 @@ public class Hello {
         this.message = message;
     }
     
+    public void init(){
+        System.out.println("Before initialize bean");
+    }
     
+    
+    public void destroy(){
+        System.out.println("before destroying bean");
+    }
     
 }

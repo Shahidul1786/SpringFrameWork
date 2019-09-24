@@ -6,29 +6,70 @@
        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
     
     
-    <bean id="hello" class="com.shahid.Hello" >
+    <bean id="hello" class="com.shahid.Hello" init-method="init" destroy-method="destroy" ><!-- remove prototype -->
          
     </bean>
     
-    <bean id="a1" class="com.shahid.Address" >
+    <bean id="address1" class="com.shahid.Address" >
         <constructor-arg value="Dhanmondi"></constructor-arg>
         <constructor-arg value="Dhaka"></constructor-arg>
         <constructor-arg value="Bangladesh"></constructor-arg>
          
     </bean>
     
-    <bean id="e" class="com.shahid.Employee" >
+    <bean id="address2" class="com.shahid.Address" >
+        <constructor-arg value="Shibalaya"></constructor-arg>
+        <constructor-arg value="Manikganj"></constructor-arg>
+        <constructor-arg value="Bangladesh"></constructor-arg>
+         
+    </bean>
+    
+    <bean id="e" class="com.shahid.Employee" > <!-- after inheritancee, auto wire remove -->
+        
+        <property name="address1">
+            <list>
+                <ref bean="address1"></ref>
+            </list>
+             
+        </property>
+     <!--   <property name="address2" ref="address2"></property> -->
+        
+        
+        <!-- after setter method ,first priorty -->
+        
+       <!--  <property name="name">
+            
+            <value>Shahidul islam</value>
+            
+        </property>
         
         <constructor-arg value="10" type="int"></constructor-arg>
         <constructor-arg value="Shahid" ></constructor-arg>
         
         <constructor-arg>
-            
-            <ref bean="a1"></ref>
+            <list>
+                <ref bean="address1"></ref>
+                <ref bean="address2"></ref>
+            </list>
             
         </constructor-arg>
+        
+        
+        -->
     </bean>
     
+    <bean id="e2" class="com.shahid.Employee" parent="e">
+        <!-- after List<> collection -->
+       <!-- <property name="address2" ref="address2"></property> -->
+       
+        <property name="address1">
+            <list merge="true">
+                <ref bean="address2"></ref>
+            </list>
+             
+        </property>
+        
+    </bean>
     
     
     

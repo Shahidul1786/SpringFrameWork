@@ -5,16 +5,59 @@
  */
 package com.shahid;
 
+import java.util.List;
+
+
+
 /**
  *
  * @author Shahidul
  */
 public class Employee {
     
-    private int id;
+    
+    private List<Address> address1;
+
+    public List<Address> getAddress1() {
+        return address1;
+    }
+
+    public void setAddress1(List<Address> address1) {
+        this.address1 = address1;
+    }
+    
+    
+    
+   // after list<> collection;
+    
+    /* private Address address2;
+
+   public Address getAddress1() {
+        return address1;
+    }
+
+    public void setAddress1(Address address1) {
+        this.address1 = address1;
+    }
+
+    public Address getAddress2() {
+        return address2;
+    }
+
+    public void setAddress2(Address address2) {
+        this.address2 = address2;
+    }
+    
+   */ 
+    
+    
+    
+  /*  private int id;
     private String name;
     
-    private Address address;
+    private List<Address> addresses;
+    
+   // private Address address;
     
     public Employee() {
     }
@@ -31,16 +74,46 @@ public class Employee {
         this.id = id;
         this.name = name;
     }
+
+    public Employee(int id, String name, List<Address> addresses) {
+        this(id, name);
+        this.addresses = addresses;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    
+    
+    
     
     public Employee(int id, String name, Address address) {
         this(id, name);
         this.address = address;
     }
+    */
+    
     
     public void show() {
         
-        System.out.print(id + " : " + name);
-        System.out.println(" "+address);
+        System.out.println(address1);
+        //System.out.println(address2);
+        
+        
+        
+        
+       /* System.out.print(id + " : " + name+" ");
+        
+        Iterator<Address> iterator = addresses.iterator();
+        
+        while (iterator.hasNext()) {
+            
+            System.out.println(iterator.next());
+            
+        }
+*/
+       
     }
     
 }
