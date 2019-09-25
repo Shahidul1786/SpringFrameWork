@@ -5,6 +5,9 @@
  */
 package com.shahid;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 /**
  *
  * @author Shahidul
@@ -21,11 +24,14 @@ public class Hello {
         this.message = message;
     }
     
+    // after Bean annotation;
+    
+    @PostConstruct
     public void init(){
         System.out.println("Before initialize bean");
     }
     
-    
+    @PreDestroy
     public void destroy(){
         System.out.println("before destroying bean");
     }

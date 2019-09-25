@@ -6,6 +6,7 @@
 package com.shahid;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Required;
 
 
 
@@ -15,8 +16,21 @@ import java.util.List;
  */
 public class Employee {
     
+    private Address address;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    @Required
+    public void setAddress(Address address) {
+        this.address = address;
+    }
     
-    private List<Address> address1;
+    
+    
+    
+    /*private List<Address> address1;
 
     public List<Address> getAddress1() {
         return address1;
@@ -26,7 +40,7 @@ public class Employee {
         this.address1 = address1;
     }
     
-    
+    */
     
    // after list<> collection;
     
@@ -97,7 +111,7 @@ public class Employee {
     
     public void show() {
         
-        System.out.println(address1);
+        System.out.println(address.toString());
         //System.out.println(address2);
         
         

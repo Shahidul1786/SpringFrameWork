@@ -18,7 +18,7 @@ public class EmployeeTest {
         
         ApplicationContext context = new ClassPathXmlApplicationContext("com/shahid/ApplicationContext.xml");
         
-        Employee emp = (Employee) context.getBean("e2"); //after inheriate enter e2 instead of e;
+        Employee emp = (Employee) context.getBean("e"); //after inheriate enter e2 instead of e;
         emp.show();
     }
     

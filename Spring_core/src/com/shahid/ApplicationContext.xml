@@ -6,14 +6,23 @@
        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
     
     
-    <bean id="hello" class="com.shahid.Hello" init-method="init" destroy-method="destroy" ><!-- remove prototype -->
+   <!-- <bean id="hello" class="com.shahid.Hello" init-method="init" destroy-method="destroy" > remove prototype 
+         
+    </bean>
+    -->
+    
+    <bean id="hello" class="com.shahid.Hello" >
+         
+    </bean>
+    
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" >
          
     </bean>
     
     <bean id="address1" class="com.shahid.Address" >
-        <constructor-arg value="Dhanmondi"></constructor-arg>
-        <constructor-arg value="Dhaka"></constructor-arg>
-        <constructor-arg value="Bangladesh"></constructor-arg>
+        <constructor-arg value="${address1.state}"></constructor-arg>
+        <constructor-arg value="{address1.city}"></constructor-arg>
+        <constructor-arg value="{address1.country}"></constructor-arg>
          
     </bean>
     
@@ -25,13 +34,19 @@
     </bean>
     
     <bean id="e" class="com.shahid.Employee" > <!-- after inheritancee, auto wire remove -->
+    
+        <property name="address">
+            
+            <ref bean="address1"></ref>
+        </property>
         
-        <property name="address1">
+       <!-- <property name="address1">
             <list>
                 <ref bean="address1"></ref>
             </list>
              
         </property>
+        -->
      <!--   <property name="address2" ref="address2"></property> -->
         
         
@@ -58,11 +73,11 @@
         -->
     </bean>
     
-    <bean id="e2" class="com.shahid.Employee" parent="e">
-        <!-- after List<> collection -->
+  <!--  <bean id="e2" class="com.shahid.Employee" parent="e"> -->
+        
        <!-- <property name="address2" ref="address2"></property> -->
        
-        <property name="address1">
+       <!-- <property name="address1">
             <list merge="true">
                 <ref bean="address2"></ref>
             </list>
@@ -70,7 +85,15 @@
         </property>
         
     </bean>
+  -->
+    <!--<bean class="com.shahid.EmployeeBeanPostProcessor"></bean> -->
+   <!-- <bean class="com.shahid.EmnployeeBeanFactoryPP"></bean> -->
+   
+   <!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="com/shahid/address.properties"></property>
+        
+    </bean>
+    -->
     
-    
-    
+    <bean   class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" ></bean>
 </beans>
