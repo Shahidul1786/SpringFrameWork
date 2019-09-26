@@ -6,7 +6,9 @@
 package com.shahid;
 
 import java.util.List;
+import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Component;
 
 
 
@@ -14,6 +16,8 @@ import org.springframework.beans.factory.annotation.Required;
  *
  * @author Shahidul
  */
+
+@Component
 public class Employee {
     
     private Address address;
@@ -22,7 +26,8 @@ public class Employee {
         return address;
     }
 
-    @Required
+//    @Required
+//    @Resource(name="address1")
     public void setAddress(Address address) {
         this.address = address;
     }
