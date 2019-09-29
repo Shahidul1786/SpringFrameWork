@@ -27,7 +27,7 @@ public class EmployeeDao {
    @Autowired
     public void setDataSource(DataSource dataSource) {
         
-       jdbcTemplate = new JdbcTemplate((javax.sql.DataSource) dataSource);
+      jdbcTemplate = new JdbcTemplate((javax.sql.DataSource) dataSource);
         
         
     }
