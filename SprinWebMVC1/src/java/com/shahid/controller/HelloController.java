@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloController {
@@ -27,5 +28,18 @@ public class HelloController {
         map.addAttribute("Hello", "hello "+name+" came from "+country);
 
         return "index";
+    }
+    
+    @RequestMapping(value = "/add",method = RequestMethod.GET)
+    public String displayEmployee(){
+        
+        return "addemployee";
+    }
+    
+     @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public String addEmployee(ModelMap map, @RequestParam("ename") String ename, @RequestParam("eaddress") String eaddress){
+        
+        map.addAttribute("edetails", "Name : "+ename+" Address : "+eaddress);
+        return "einfo";
     }
 }
