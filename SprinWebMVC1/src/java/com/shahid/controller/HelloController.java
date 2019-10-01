@@ -1,8 +1,10 @@
 package com.shahid.controller;
 
+import com.shahid.model.Employee;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -37,9 +39,25 @@ public class HelloController {
     }
     
      @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public String addEmployee(ModelMap map, @RequestParam("ename") String ename, @RequestParam("eaddress") String eaddress){
+    //public String addEmployee(ModelMap map, @RequestParam("ename") String ename, @RequestParam("eaddress") String eaddress){
+       
+        public String addEmployee(ModelMap map, @ModelAttribute("employee") Employee employee){
+        //map.addAttribute("edetails", "Name : "+ename+" Address : "+eaddress);
         
-        map.addAttribute("edetails", "Name : "+ename+" Address : "+eaddress);
+//         Employee employee = new Employee();
+//         employee.setEname(ename);
+//         employee.setEaddress(eaddress);
+//         
+//         map.addAttribute("employee", employee);
         return "einfo";
     }
+        
+        @ModelAttribute
+        public String showMessage(ModelMap map){
+            
+            map.addAttribute("msg", "helo MVC..");
+            
+            return "einfo";
+            
+        }
 }

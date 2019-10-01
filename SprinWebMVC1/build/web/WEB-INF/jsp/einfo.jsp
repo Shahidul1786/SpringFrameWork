@@ -12,6 +12,34 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>${edetails}</h1>
+       <%-- <h1>${edetails}</h1> --%>
+       ${msg}
+       <table>
+           <tr>
+               <td>employee name :</td>
+               <td>${employee.ename}</td>
+               
+           </tr>
+             <tr>
+               <td>employee address : </td>
+               <td>${employee.eaddress}</td>
+               
+           </tr>
+            <tr>
+               <td>employee Mobile no : </td>
+               <td>${employee.empMobile}</td>
+               
+           </tr>
+            <tr>
+               <td>employee DOB : </td>
+               <td>${employee.empDob}</td>
+               
+           </tr>
+            <tr>
+               <td>employee Skills : </td>
+               <td>${employee.skillTest}</td>
+               
+           </tr>
+       </table>
     </body>
 </html>

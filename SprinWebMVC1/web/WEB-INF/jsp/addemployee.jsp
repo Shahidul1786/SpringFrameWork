@@ -13,11 +13,42 @@
     </head>
     <body>
         <form action="/SprinWebMVC1/add" method="post">
-            <label> Employee Name</label>
-            <input type="text" name="ename"><br>
-            <label> Employee Address</label>
-            <input type="text" name="eaddress"><br>
-            <input type="submit" value="submit"/>
+
+
+            <table>
+                <tr>
+                    <td><lebel>Employee Name</lebel></td>
+                <td><input type="text" name="ename"></td>
+                </tr>
+
+                <tr>
+                    <td><lebel>Employee Address</lebel></td>
+                <td><input type="text" name="eaddress"></td>
+                </tr>
+
+                <tr>
+                    <td><lebel>Employee Mobile No</lebel></td>
+                <td><input type="text" name="empMobile"></td>
+                </tr>
+
+                <tr>
+                    <td><lebel>Employee DOB</lebel></td>
+                <td><input type="text" name="empDob"></td>
+                </tr>
+
+                <tr>
+                    <td><lebel>Employee Skill</lebel></td>
+                <td>
+                    <select name="skillTest" multiple>
+                        <option value="Spring core">Spring core</option>
+                        <option value="Spring AOP">Spring AOP</option>
+                        <option value="Spring JDBC">Spring JDBC</option>
+                        <option value="Spring MVC">Spring MVC</option>
+                    </select>
+                </td>
+                </tr>
+                <tr><td><input type="submit" value="submit"</td></tr>
+            </table>
         </form>
     </body>
 </html>
