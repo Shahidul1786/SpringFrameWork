@@ -40,6 +40,18 @@
                <td>${employee.skillTest}</td>
                
            </tr>
+           
+           <tr>
+               <td>Department ID : </td>
+               <td>${employee.department.deptId}</td>
+               
+           </tr>
+           
+           <tr>
+               <td>Department Name : </td>
+               <td>${employee.department.deptName}</td>
+               
+           </tr>
        </table>
     </body>
 </html>

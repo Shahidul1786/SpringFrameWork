@@ -2,7 +2,7 @@ package com.shahid.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 public class Employee {
 
@@ -12,6 +12,10 @@ public class Employee {
   private Long empMobile;
   private Date empDob;
    private ArrayList<String> skillTest;
+   
+   private Department department;
+   
+   
 
     public String getEname() {
         return ename;
@@ -53,6 +57,14 @@ public class Employee {
 
     public ArrayList<String> getSkillTest() {
         return skillTest;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
     
     

@@ -47,6 +47,16 @@
                     </select>
                 </td>
                 </tr>
+                
+                <tr>
+                    <td><lebel>Department ID :</lebel></td>
+                <td><input type="text" name="department.deptId"></td>
+                </tr>
+                <tr>
+                    <td><lebel>Department Name :</lebel></td>
+                <td><input type="text" name="department.deptName"></td>
+                </tr>
+                
                 <tr><td><input type="submit" value="submit"</td></tr>
             </table>
         </form>
