@@ -1,10 +1,15 @@
 package com.shahid.controller;
 
 import com.shahid.model.Employee;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +18,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloController {
+    
+    @InitBinder
+    public void myInitBinder(WebDataBinder binder){
+        
+        binder.setDisallowedFields(new String[]{"empMobile"});
+        
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        
+        binder.registerCustomEditor(Date.class, "empDob", new CustomDateEditor(format, false));
+        
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String HelloMessage(ModelMap map) {
