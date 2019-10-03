@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
+        <form:errors path="employee.*"/>
         <form action="/SprinWebMVC1/add" method="post">
 
 
