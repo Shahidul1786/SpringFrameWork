@@ -27,6 +27,7 @@ public class HelloController {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         
         binder.registerCustomEditor(Date.class, "empDob", new CustomDateEditor(format, false));
+        binder.registerCustomEditor(String.class, "ename", new EmployeeNameEditor());
         
     }
 
