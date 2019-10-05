@@ -2,12 +2,14 @@ package com.shahid.model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.validation.constraints.Size;
 
 
 public class Employee {
 
-    String ename;
-    String eaddress;
+  @Size(min=3,max=30)  
+  private String ename;
+  private String eaddress;
 
   private Long empMobile;
   private Date empDob;

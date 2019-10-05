@@ -4,6 +4,7 @@ import com.shahid.model.Employee;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import javax.validation.Valid;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -59,7 +60,7 @@ public class HelloController {
      @RequestMapping(value = "/add",method = RequestMethod.POST)
     //public String addEmployee(ModelMap map, @RequestParam("ename") String ename, @RequestParam("eaddress") String eaddress){
        
-        public String addEmployee(ModelMap map, @ModelAttribute("employee") Employee employee,BindingResult result){
+        public String addEmployee(ModelMap map,@Valid @ModelAttribute("employee") Employee employee,BindingResult result){
         //map.addAttribute("edetails", "Name : "+ename+" Address : "+eaddress);
         
 //         Employee employee = new Employee();
