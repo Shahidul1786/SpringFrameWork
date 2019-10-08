@@ -23,7 +23,7 @@ public class HelloController {
     @InitBinder
     public void myInitBinder(WebDataBinder binder){
         
-        binder.setDisallowedFields(new String[]{"empMobile"});
+       // binder.setDisallowedFields(new String[]{"empMobile"});
         
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         

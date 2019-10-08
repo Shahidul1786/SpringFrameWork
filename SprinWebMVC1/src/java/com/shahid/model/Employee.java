@@ -1,5 +1,6 @@
 package com.shahid.model;
 
+import com.shahid.controller.Phone;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.validation.constraints.Past;
@@ -15,7 +16,8 @@ public class Employee {
   @NotEmpty
   private String eaddress;
   
-  private Long empMobile;
+  @Phone
+  private String empMobile;
   @Past
   private Date empDob;
   
@@ -52,11 +54,11 @@ public class Employee {
         this.eaddress = eaddress;
     }
 
-    public Long getEmpMobile() {
+    public String getEmpMobile() {
         return empMobile;
     }
 
-    public void setEmpMobile(Long empMobile) {
+    public void setEmpMobile(String empMobile) {
         this.empMobile = empMobile;
     }
 
