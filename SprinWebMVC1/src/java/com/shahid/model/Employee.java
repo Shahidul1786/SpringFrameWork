@@ -2,20 +2,37 @@ package com.shahid.model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 
 public class Employee {
 
   @Size(min=3,max=30)  
   private String ename;
+  @NotEmpty
   private String eaddress;
-
+  
   private Long empMobile;
+  @Past
   private Date empDob;
+  
    private ArrayList<String> skillTest;
    
    private Department department;
+   
+   @Email
+   private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
    
    
 

@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
+
         <form:errors path="employee.*"/>
         <form action="/SprinWebMVC1/add" method="post">
 
@@ -40,6 +40,11 @@
                 </tr>
 
                 <tr>
+                    <td><lebel>Employee Email</lebel></td>
+                <td><input type="text" name="email"></td>
+                </tr>
+
+                <tr>
                     <td><lebel>Employee Skill</lebel></td>
                 <td>
                     <select name="skillTest" multiple>
@@ -50,7 +55,7 @@
                     </select>
                 </td>
                 </tr>
-                
+
                 <tr>
                     <td><lebel>Department ID :</lebel></td>
                 <td><input type="text" name="department.deptId"></td>
@@ -59,7 +64,7 @@
                     <td><lebel>Department Name :</lebel></td>
                 <td><input type="text" name="department.deptName"></td>
                 </tr>
-                
+
                 <tr><td><input type="submit" value="submit"</td></tr>
             </table>
         </form>
