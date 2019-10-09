@@ -5,8 +5,11 @@
         <group>
             <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/model/Employee.java</file>
             <file>file:/F:/SpringFrameWork/SprinWebMVC1/web/WEB-INF/jsp/addemployee.jsp</file>
+            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/Phone.java</file>
+            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/PhoneValidator.java</file>
             <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/HelloController.java</file>
             <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/EmployeeNameEditor.java</file>
+            <file>file:/F:/SpringFrameWork/SprinWebMVC1/web/WEB-INF/jsp/einfo.jsp</file>
         </group>
     </open-files>
 </project-private>
