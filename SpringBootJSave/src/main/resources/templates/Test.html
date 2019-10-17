@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>For Test</title>
+<meta name="description" content="Sufee Admin - HTML5 Admin Template">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/themify-icons.css">
+<link rel="stylesheet" href="/css/flag-icon.min.css">
+<link rel="stylesheet" href="/css/cs-skin-elastic.css">
+<link rel="stylesheet"
+	href="/css/lib/datatable/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="/scss/style.css">
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800'
+	rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+
+	<form method="POST">
+
+		name:<br> <input type="text" id="name1" name="name"
+			placeholder="name"><br> salary:<br> <input
+			type="text" id="salary" name="salary" placeholder="salary"><br>
+
+		designation:<br> <input type="text" id="designation"
+			name="designation" placeholder="designation"><br> <br>
+		<a id="saveBtn" class="btn btn-success">save</a>
+
+	</form>
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+
+	<script>
+		$('#saveBtn').click(function() {
+
+			var name1 = $('#name1').val();
+			var salary = $('#salary').val();
+			var designation = $('#designation').val();
+			//alert("Welcome");
+
+			alert("name1 " + name1);
+
+			//object
+			var formData = {
+				"name1" : name1,
+				"salary" : salary,
+				"designation" : designation
+			};
+
+			alert("1");
+			$.ajax({
+
+				url : "/test123/save",
+				type : "POST",
+				dataType : 'json',
+				data : formData,
+
+				success : function(res) {
+					alert("res " + res);
+
+					if (res == 1) {
+						alert("Saved successfully");
+					}
+
+					else {
+
+						alert("Not saved successfully");
+					}
+				}
+
+			});
+
+		});
+	</script>
+</body>
+</html>
