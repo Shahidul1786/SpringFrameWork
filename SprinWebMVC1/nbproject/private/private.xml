@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/model/Employee.java</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/web/WEB-INF/jsp/addemployee.jsp</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/Phone.java</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/PhoneValidator.java</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/HelloController.java</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/controller/EmployeeNameEditor.java</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/web/WEB-INF/jsp/einfo.jsp</file>
-            <file>file:/F:/SpringFrameWork/SprinWebMVC1/src/java/com/shahid/interceptor/MaintenceInterceptor.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
