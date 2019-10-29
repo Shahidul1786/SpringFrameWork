@@ -18,5 +18,6 @@
 	<classpathentry kind="lib" path="E:/lib/Spring/spcorejars/spring-jdbc-4.3.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/lib/Spring/spcorejars/spring-tx-4.3.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/lib/Spring/spcorejars/ojdbc14-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/lib/Spring/mysql-connector-java-5.1.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
