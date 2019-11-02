@@ -14,24 +14,22 @@ public class EmployeeDao {
 	
 	public int saveEmployee(Employee e) {
 		
-		String query="insert into employee values(  \r\n" + 
-				"			    '\"+e.getId()+\"','\"+e.getName()+\"','\"+e.getSalary()+\"')";
+		String query="insert into employee(id,name,salary) values(103,'rani',500)";
 		
 		return jdbcTemplate.update(query);
 		
 	}
 	
-	public int updateEmployee(Employee e){  
-	    String query=" update employee set   \r\n" + 
-	    		"	    name='\"+e.getName()+\"',salary='\"+e.getSalary()+\"' where id='\"+e.getId()+\"'";  
-	    return jdbcTemplate.update(query);  
-	} 
+	//public int updateEmployee(Employee e){  
+	    //String query=" update employee set name='Raj' where id=100";	    
+	    //return jdbcTemplate.update(query);  
+	//} 
 	
 	
-	public int deleteEmployee(Employee e){  
-	    String query="delete from employee where id='"+e.getId()+"' ";  
-	    return jdbcTemplate.update(query);  
-	}
+	//public int deleteEmployee(Employee e){  
+	 //   String query="delete from employee where id=100 ";  
+	  //  return jdbcTemplate.update(query);  
+	//}
 	
 	
 	

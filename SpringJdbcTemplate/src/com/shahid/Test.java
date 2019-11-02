@@ -13,9 +13,9 @@ public class Test {
 		
 		EmployeeDao dao  = (EmployeeDao) ctx.getBean("edao");
 		
-		int status = dao.saveEmployee(new Employee(100,"shahid",8000));
+		int status = dao.saveEmployee(new Employee());
 		
-		System.out.println(status);
+		//System.out.println(status);
 
 	}
 
