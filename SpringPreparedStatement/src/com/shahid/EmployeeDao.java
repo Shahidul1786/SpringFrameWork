@@ -17,17 +17,22 @@ public class EmployeeDao {
 	    this.jdbcTemplate = jdbcTemplate;  
 	}  
 	  
-	public T saveEmployeeByPreparedStatement(final Employee e) {
+	public Boolean saveEmployeeByPreparedStatement(final Employee e) {
 		
 		String query="insert into employee values(?,?,?)";
 		
-		return jdbcTemplate.execute(query, new PreparedStatementCallback<T>() {
+		return jdbcTemplate.execute(query, new PreparedStatementCallback<Boolean>() {
 
-			public T doInPreparedStatement(PreparedStatement ps) throws SQLException, DataAccessException {
+			
+
+			@Override
+			public Boolean doInPreparedStatement(java.sql.PreparedStatement ps)
+					throws SQLException, DataAccessException {
 				
 				ps.setInt(1, e.getId());
 				ps.setString(2, e.getName());
 				ps.setInt(3, e.getSalary());
+				
 				
 				return ps.execute();
 			}
